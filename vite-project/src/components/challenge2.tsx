@@ -13,6 +13,7 @@ const ChallengeTwo: React.FC = () => {
       <Link to={"/"}>go home Page</Link>
       <Link to={"/challenge1"}>Challenge 1</Link>
       <Link to={"/challenge3"}>Challenge 3</Link>
+      <Link to={"/challenge4"}>to do app</Link>
       <div>
         <ChildOne propOne={propsToBePassed[0]} />
         <ChildTwo propTwo={propsToBePassed[1]} />

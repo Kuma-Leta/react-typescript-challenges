@@ -14,6 +14,7 @@ const ChallengeThree: React.FC = () => {
       <Link to={"/"}>go home </Link>
       <Link to={"/challenge1"}>Challenge 1</Link>
       <Link to={"/challenge2"}>Challenge 2</Link>
+      <Link to={"/challenge4"}>to do app</Link>
       <div className="flex align-center justify-center">
         <button onClick={handleDecreament} className="bg-blue ">
           -
