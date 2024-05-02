@@ -11,8 +11,8 @@ const App: React.FC = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/chalenge1" element={<ChallengeOne />} />
-          <Route path="/chalenge2" element={<ChallengeTwo />} />
+          <Route path="/challenge1" element={<ChallengeOne />} />
+          <Route path="/challenge2" element={<ChallengeTwo />} />
           <Route path="/challenge3" element={<ChallengeThree />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
