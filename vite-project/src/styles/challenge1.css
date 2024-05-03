@@ -1,0 +1,23 @@
+.container {
+  background-color: black;
+  min-height: 100vh;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.linksContainer {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+  color: white;
+}
+.hello {
+  color: white;
+}
