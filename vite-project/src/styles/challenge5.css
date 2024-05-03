@@ -1,0 +1,38 @@
+.formContainer {
+  width: 100%;
+  margin: auto;
+  background-color: white;
+}
+.form {
+  width: 100%;
+  margin: auto;
+  background-color: rgb(40, 44, 47);
+  padding: 2rem;
+  min-height: 50vh;
+  border-radius: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+.email input,
+.password input {
+  border: none;
+  outline: none;
+  text-align: center;
+  color: black;
+  height: 2.1rem;
+}
+.email,
+.password {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.submit {
+  display: flex;
+  justify-content: flex-end;
+}
+.submit input {
+  background-color: rgb(136, 0, 255);
+  width: 5rem;
+  height: 2rem;
+  cursor: pointer;
+}

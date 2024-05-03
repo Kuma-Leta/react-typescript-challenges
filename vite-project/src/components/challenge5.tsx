@@ -1,10 +1,22 @@
 import React, { FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
+import { signIn } from "../firebaseConfig";
+import "../styles/challenge5.css";
 export const ChallengeFive: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassWord] = useState("");
-  const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const [Error, setError] = useState("");
+  const [LoginResult, setResult] = useState<any>(null);
+  const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    try {
+      const result = await signIn(email, password);
+      if (result) {
+        setResult("successfully Logged in");
+      }
+    } catch (error: any) {
+      setError(error.message);
+    }
   };
   return (
     <div className="container">
@@ -19,16 +31,25 @@ export const ChallengeFive: React.FC = () => {
         <form onSubmit={handleFormSubmit} className="form">
           <div className="email">
             <label htmlFor="email">Email</label>
-            <input type="text" value={} />
+            <input
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className="password">
-            <label htmlFor="password">password</label>
-            <input type="password" />
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassWord(e.target.value)}
+            />
           </div>
           <div className="submit">
             <input type="submit" value={"Login"} />
           </div>
         </form>
+        {LoginResult ? <p>{LoginResult}</p> : <p>{Error}</p>}
       </div>
     </div>
   );
