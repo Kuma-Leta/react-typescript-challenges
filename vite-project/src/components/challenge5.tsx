@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/home.css";
-// import ChallengeOne from "./challenge1";
-const Home: React.FC = () => {
+export const ChallengeFive: React.FC = () => {
   return (
-    <div className="home">
+    <div className="container">
       <div className="links">
         <Link to={"/challenge1"}>Challenge 1</Link>
         <Link to={"/challenge2"}>Challenge 2</Link>
@@ -12,11 +10,7 @@ const Home: React.FC = () => {
         <Link to={"/challenge4"}>to do app</Link>
         <Link to={"/challenge5"}>challenge5</Link>
       </div>
-      <div className="headersContainer">
-        <h1 className="">WellCome to List of Challenges Home Page</h1>
-        <h2> Please use the Above Links To Navigate Among The Challenges</h2>
-      </div>
+      <div>challenge 5</div>
     </div>
   );
 };
-export default Home;
