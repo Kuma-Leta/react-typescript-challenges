@@ -55,7 +55,9 @@ export const ToDoList: React.FC = () => {
               onChange={(e) => setDescription(e.target.value)}
             />
           </div>
-          <input className="btn" type="submit" value={"Add"} />
+          <div className="btnContainer">
+            <input className="btn" type="submit" value={"Add"} />
+          </div>
         </form>
         <div className="todoGeneralContainer">
           <div className="todos">

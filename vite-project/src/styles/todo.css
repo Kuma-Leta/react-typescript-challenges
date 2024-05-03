@@ -20,11 +20,24 @@
 .formElement {
   display: grid;
   grid-template-columns: 50% 50%;
+  color: white;
+  outline: none;
+  border: none;
+  /* text-align: center; */
+}
+.formElement input {
+  text-align: center;
+  border: none;
+  outline: none;
+  color: black;
 }
 .btn {
   width: 5rem;
   height: 2rem;
   background-color: rgb(128, 0, 119);
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 /* .todoGeneralContainer{
   width: 60%;
@@ -45,4 +58,8 @@
   gap: 1rem;
   justify-content: flex-end;
   padding: 1rem;
+}
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
 }
