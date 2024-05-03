@@ -1,5 +1,6 @@
 import React, { FormEvent, useState } from "react";
 import "../styles/todo.css";
+import { Link } from "react-router-dom";
 export const ToDoList: React.FC = () => {
   const [title, setTitle] = useState<string>("");
   const [description, setDescription] = useState<string>("");
@@ -28,8 +29,14 @@ export const ToDoList: React.FC = () => {
   return (
     <>
       <div className="container">
-        <h1 className="header">My Todos</h1>
+        <div className="links">
+          <Link to={"/"}>home</Link>
+          <Link to={"/challenge1"}>challenge1</Link>
+          <Link to={"/challenge2"}>challenge2</Link>
+          <Link to={"/challenge3"}>challenge3</Link>
+        </div>
         <form className="formContainer" onSubmit={handleToDoAddition}>
+          <h1 className="header">My Todos</h1>
           <div className="formElement">
             <label htmlFor="title">Title</label>
             <input
@@ -50,11 +57,11 @@ export const ToDoList: React.FC = () => {
           </div>
           <input className="btn" type="submit" value={"Add"} />
         </form>
-        <div>
-          <div>
+        <div className="todoGeneralContainer">
+          <div className="todos">
             {todos.map((todo, index) => (
               <div key={index} className="todoContainer">
-                <div>
+                <div className="titleAndDescription">
                   <h2>{todo.title}</h2>
                   <p>{todo.description}</p>
                 </div>
