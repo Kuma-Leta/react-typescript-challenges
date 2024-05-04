@@ -28,14 +28,14 @@ export const ToDoList: React.FC = () => {
   };
   return (
     <>
-      <div className="container">
-        <div className="links">
+      <div className="todoMaincontainer">
+        <div className="todolinks">
           <Link to={"/"}>home</Link>
           <Link to={"/challenge1"}>challenge1</Link>
           <Link to={"/challenge2"}>challenge2</Link>
           <Link to={"/challenge3"}>challenge3</Link>
         </div>
-        <form className="formContainer" onSubmit={handleToDoAddition}>
+        <form className="todoformContainer" onSubmit={handleToDoAddition}>
           <h1 className="header">My Todos</h1>
           <div className="formElement">
             <label htmlFor="title">Title</label>
