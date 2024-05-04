@@ -1,11 +1,11 @@
-.container {
+.todoMaincontainer {
   display: flex;
   flex-direction: column;
   width: 100%;
   background-color: black;
   min-height: 100vh;
 }
-.formContainer,
+.todoformContainer,
 .todoGeneralContainer {
   width: 60%;
   margin: auto;
@@ -52,7 +52,7 @@
   padding: 1rem;
   border-bottom: 1px solid white;
 }
-.links {
+.todolinks {
   color: white;
   display: flex;
   gap: 1rem;
